@@ -6,11 +6,13 @@ import com.example.bms.service.BMSException;
 import com.example.bms.service.HospitalService;
 import com.example.bms.service.dto.HospitalDTO;
 import com.example.bms.service.mapper.HospitalMapper;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+@Service
 public class DefaultHospitalService implements HospitalService {
 
     private final HospitalMapper hospitalMapper;

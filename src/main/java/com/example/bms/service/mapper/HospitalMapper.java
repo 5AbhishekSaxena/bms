@@ -2,7 +2,9 @@ package com.example.bms.service.mapper;
 
 import com.example.bms.entity.Hospital;
 import com.example.bms.service.dto.HospitalDTO;
+import org.springframework.stereotype.Service;
 
+@Service
 public class HospitalMapper {
 
     public HospitalDTO mapToDto(Hospital hospital) {
