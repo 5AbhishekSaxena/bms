@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Service
@@ -35,6 +36,7 @@ public class DefaultHospitalService implements HospitalService {
         // todo: Add validation for other fields and throw appropriate exception if needed.
 
         Hospital hospital = hospitalMapper.mapToEntity(hospitalDTO);
+        hospital.setId(UUID.randomUUID().toString());
         Hospital newHospital = hospitalRepository.save(hospital);
         return hospitalMapper.mapToDto(newHospital);
     }
@@ -52,7 +54,7 @@ public class DefaultHospitalService implements HospitalService {
     }
 
     @Override
-    public HospitalDTO findById(Long id) throws BMSException {
+    public HospitalDTO findById(String id) throws BMSException {
         Optional<Hospital> optionalHospital = hospitalRepository.findById(id);
         Hospital hospital = optionalHospital.orElseThrow(
                 () -> new BMSException(String.format("Hospital with id %d not found.", id))

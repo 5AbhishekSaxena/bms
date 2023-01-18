@@ -3,7 +3,7 @@ package com.example.bms.entity;
 import java.util.Objects;
 
 public class Hospital {
-    private Long id;
+    private String id;
     private String name;
     private String address;
     private String contact;
@@ -13,7 +13,7 @@ public class Hospital {
     public Hospital() {
     }
 
-    public Hospital(Long id, String name, String address, String contact, Integer numberOfRooms, String logo) {
+    public Hospital(String id, String name, String address, String contact, Integer numberOfRooms, String logo) {
         this.id = id;
         this.name = name;
         this.address = address;
@@ -22,11 +22,11 @@ public class Hospital {
         this.logo = logo;
     }
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 

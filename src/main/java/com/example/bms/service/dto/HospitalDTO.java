@@ -1,7 +1,7 @@
 package com.example.bms.service.dto;
 
 public class HospitalDTO {
-    private Long id;
+    private String id;
     private String name;
     private String address;
     private String contact;
@@ -11,7 +11,7 @@ public class HospitalDTO {
     public HospitalDTO() {
     }
 
-    public HospitalDTO(Long id, String name, String address, String contact, Integer numberOfRooms, String logo) {
+    public HospitalDTO(String id, String name, String address, String contact, Integer numberOfRooms, String logo) {
         this.id = id;
         this.name = name;
         this.address = address;
@@ -20,11 +20,11 @@ public class HospitalDTO {
         this.logo = logo;
     }
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 

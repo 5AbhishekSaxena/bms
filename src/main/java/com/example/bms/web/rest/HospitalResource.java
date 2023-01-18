@@ -31,7 +31,7 @@ public class HospitalResource {
     }
 
     @GetMapping("/{id}")
-    ResponseEntity<HospitalDTO> findHospitalById(@PathVariable("id") Long id) throws BMSException {
+    ResponseEntity<HospitalDTO> findHospitalById(@PathVariable("id") String id) throws BMSException {
         HospitalDTO body = hospitalService.findById(id);
         return ResponseEntity.ok(body);
     }

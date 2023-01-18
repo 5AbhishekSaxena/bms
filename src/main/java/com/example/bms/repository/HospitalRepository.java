@@ -11,7 +11,7 @@ public interface HospitalRepository {
 
     List<Hospital> findAll();
 
-    Optional<Hospital> findById(Long id);
+    Optional<Hospital> findById(String id);
 
     Optional<Hospital> findByName(String name);
 

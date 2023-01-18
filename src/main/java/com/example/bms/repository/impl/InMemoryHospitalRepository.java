@@ -25,7 +25,7 @@ public class InMemoryHospitalRepository implements HospitalRepository {
     }
 
     @Override
-    public Optional<Hospital> findById(Long id) {
+    public Optional<Hospital> findById(String id) {
         return hospitals.stream()
                 .filter(it -> it.getId().equals(id))
                 .findFirst();

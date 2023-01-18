@@ -10,7 +10,7 @@ public interface HospitalService {
 
     List<HospitalDTO> findAll() throws BMSException;
 
-    HospitalDTO findById(Long id) throws BMSException;
+    HospitalDTO findById(String id) throws BMSException;
 
     HospitalDTO findByName(String name) throws BMSException;
 }
